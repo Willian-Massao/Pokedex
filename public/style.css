@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pokedex {
+    background-color: #444;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.pokedex a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.pokedex-countainer {
+    margin: 10px;
+    transition: .2s;
+}
+
+.pokedex-countainer:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+.pokedex-screen {
+    background-color: #222222;
+    border: 1px solid #888;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.pokedex-screen img {
+    width: 100px;
+    height: 100px;
+}
+
+.pokedex-info {
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+ul li {
+    margin: 5px 0;
+}
+
+.pokemon-details {
+    background-color: #444;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-image {
+    background-color: #222;
+    border: 1px solid #888;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.pokemon-image img{
+    width: 200px;
+    height: fit-content;
+}
+
+.unshiny {
+    display: block;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+
+.shiny{
+    display: block;
+    position: relative;
+    margin-top: -100px;
+    top: 0;
+    z-index: 0;
+}
+
+.pokedex-countainer:hover .unshiny{
+    opacity: 0;
+    transition: .5s;
+}
+
+@keyframes select {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

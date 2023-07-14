@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Detalhes do Pokémon</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="dark-theme">
+    <header>
+      <h1>Pokédex</h1>
+    </header>
+
+    <main>
+        <div class="pokemon-details">
+            <div class="pokemon-image">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/<%= data.id %>.png" alt="Pokemon Image" class="unshiny">
+            </div>
+            <div class="pokemon-info">
+                <h2><%= data.name %></h2>
+                <p>Type: <%= data.types[0].type.name %></p>
+                <p>Height: <%= data.height %>m</p>
+                <p>Weight: <%= data.weight %>kg</p>
+                <p>Abilities: Ability 1, Ability 2, Ability 3</p>
+                <p>Base Experience: <%= data.base_experience %></p>
+                <p>Stats:</p>
+                <ul>
+                    <li>HP: <%= data.stats[0].base_stat %></li>
+                    <li>Attack: <%= data.stats[1].base_stat %></li>
+                    <li>Defense: <%= data.stats[2].base_stat %></li>
+                    <li>Special Attack: <%= data.stats[3].base_stat %></li>
+                    <li>Special Defense: <%= data.stats[4].base_stat %></li>
+                    <li>Speed: <%= data.stats[5].base_stat %></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

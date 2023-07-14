@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="dark-theme">
+    <main>
+        <div class="pokedex">
+            <% data.results.forEach((e)=>{%>
+                <a href="/pokemon/<%= e.name %>">
+                    <div class="pokedex-countainer">
+                        <div class="pokedex-screen">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/<%= e.url.split('/')[6] %>.png" alt="Pokemon Image" class="unshiny">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/<%= e.url.split('/')[6] %>.png" alt="Pokemon Image" class="shiny">
+                        </div>
+                        <div class="pokedex-info">
+                            <h2><%= e.name%></h2>
+                        </div>
+                    </div>
+                </a>
+            <% }) %>
+        </div>
+    </main>
+</body>
+</html>
